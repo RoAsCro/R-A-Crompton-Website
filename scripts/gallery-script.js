@@ -1,6 +1,6 @@
 
 window.onload = function() {
-    window.alert("One");
+    window.alert("t5");
 
     const filePath = "/resources/images/gallery-images"
     let gallery = document.getElementsByTagName("head")[0].getAttribute("id");
