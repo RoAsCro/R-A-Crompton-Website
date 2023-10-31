@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link id="style-sheet" rel="stylesheet" href="./styles/default-style.css">
+    <script type="text/javascript" src="./scripts/default-script.js"></script>
     <meta charset="UTF-8">
     <link rel="icon" href="./resources/images/misc_art.png">
     <title>R A Crompton's Personal Website</title>
   </head>
 
   <body>
+    <header>
+        <button id="mode" value="dark">Dark Mode</button>
+    </header>
 
     <h3>Programming</h3>
     <p>Find my GitHub <a href="https://github.com/RoAsCro">here.</a></p>
@@ -19,22 +24,24 @@
     <p>The source code can be found <a href="https://github.com/RoAsCro/UnPassant">here</a>.</p>
     <h4></h4>
 
-    <hr>
-    
-    <h3>Work Experience</h3>
-    <p>From April 2019 - April 2022 I was employed by Wandsworth Council first as an Administrative Assistant,
-        then as a Pensions Assistant, and finally a Pensions Officer. This involved:
-    </p>
-    <ul>
-        <li>Calculating and putting into payment pensions and interest in accordance with policy guidelines</li>
-        <li>Monthly pay runs</li>
-        <li>Assisting with general office admin including paperwork and data entry</li>
-        <li>Communicating with clients in person and via phone and email</li>
-        <li>Data cleansing records going back 20+ years</li>
-    </ul>
+    <section class="lvl-two">
+        <hr>
 
-    <hr>
+        <h3>Work Experience</h3>
+        <p>From April 2019 - April 2022 I was employed by Wandsworth Council first as an Administrative Assistant,
+            then as a Pensions Assistant, and finally a Pensions Officer. This involved:
+        </p>
+        <ul>
+            <li>Calculating and putting into payment pensions and interest in accordance with policy guidelines</li>
+            <li>Monthly pay runs</li>
+            <li>Assisting with general office admin including paperwork and data entry</li>
+            <li>Communicating with clients in person and via phone and email</li>
+            <li>Data cleansing records going back 20+ years</li>
+        </ul>
+        <hr>
+    </section>
 
+    <section class="lvl-three">
     <h3>Education</h3>
     <ul>
         <li>Bachelor's Degree in Classics from the University of St Andrews</li>
@@ -42,27 +49,27 @@
     </ul>
 
     <hr>
+    </section>
 
     <h3>Art</h3>    
     <p>I've been creating digital art since 2016, and a sample of some of my works can be found below.</p>
     <ul>
         <li>
-            <a href="./artPages/miscart.html"><img src="./resources/images/misc_art.png" height="70" alt="An icon of a large robotic eye">
+            <a href="./artPages/miscart.html"><img class="icon" src="./resources/images/misc_art.png" height="70" alt="An icon of a large robotic eye">
                 Miscellaneous
             </a>
         </li>
         <li>
-            <a href="./artPages/csart.html"><img src="./resources/images/egg.png" height="70" alt="An icon of a broken egg emitting light and containing a skeletal bird">
+            <a href="./artPages/csart.html"><img class="icon" src="./resources/images/egg.png" height="70" alt="An icon of a broken egg emitting light and containing a skeletal bird">
                 Secret Histories Fanart
             </a>
         </li>
         <li>
-            <a href="./artPages/animation.html"><img src="./resources/images/celt.png" height="70" alt="An icon of part of a celtic knot design">
+            <a href="./artPages/animation.html"><img class="icon" src="./resources/images/celt.png" height="70" alt="An icon of part of a celtic knot design">
                 Animation
             </a>
         </li>
     </ul>
-    <p></p>
     <hr>
   </body>
 </html>
