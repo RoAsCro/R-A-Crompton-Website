@@ -9,6 +9,9 @@
 #dark {
     background-color: #2f293d;
     color: #FAF0E6;
+    a:visited {
+        color: #a00305;
+    }
 }
 
 p {
