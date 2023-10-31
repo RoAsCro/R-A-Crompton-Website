@@ -4,9 +4,9 @@ window.onload = function() {
     const filePath = "/resources/images/gallery-images"
     
     let gallery = document.getElementsByTagName("head")[0].getAttribute("id");
-    window.alert("t7");
+    window.alert("t8");
 
-    $.get("../scripts/images.xml", function(data) {
+    $.get("../scripts/images.xml", function( data ) {
         window.alert("Two");
 
         const images = data.querySelectorAll("image < " + gallery);
@@ -18,7 +18,8 @@ window.onload = function() {
             img.setAttribute("alt", images[i].querySelector("alt").innerHTML)
             document.getElementsByTagName("body")[0].append;
         }
-    },
-    "xml");
+        },
+        "xml"
+        )
 
 }
