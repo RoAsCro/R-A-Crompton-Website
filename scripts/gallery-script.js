@@ -5,7 +5,7 @@ window.onload = function() {
     const filePath = "/resources/images/gallery-images"
     let gallery = document.getElementsByTagName("head")[0].getAttribute("id");
 
-    $.get("../scripts/images.xml", function(data) {
+    $.get("./scripts/images.xml", function(data) {
         window.alert("Two");
 
         const images = data.querySelectorAll("image < " + gallery);
