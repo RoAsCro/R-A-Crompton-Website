@@ -17,6 +17,7 @@ window.onload = function() {
             img.setAttribute("alt", images[i].querySelector("alt").innerHTML)
             document.getElementsByTagName("body")[0].append;
         }
-    })
+    },
+    "xml")
 
 }
