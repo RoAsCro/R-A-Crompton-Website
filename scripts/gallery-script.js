@@ -6,7 +6,7 @@ window.onload = function() {
     let gallery = document.getElementsByTagName("head")[0].getAttribute("id");
     window.alert("t10");
 
-    $.get("../scripts/images.xml", function( data ) {
+    $.get("../scripts/images2.xml", function( data ) {
         window.alert("Two");
 
         // const images = data.querySelectorAll("image < " + gallery);
