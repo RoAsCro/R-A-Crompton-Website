@@ -1,4 +1,16 @@
 * {
-    background-color: lightgrey;
     font-family: sans-serif;
+}
+
+#light {
+    background-color: lightgrey;
+}
+
+#dark {
+    background-color: #2f293d;
+    color: #FAF0E6;
+}
+
+p {
+    margin-right: 20px;
 }

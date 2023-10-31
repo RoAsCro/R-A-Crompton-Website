@@ -1,22 +1,17 @@
 function colourMode() {
-    let button = document.getElementById("mode");
-    let sheet = "/default-style.css";
-    let style = document.getElementById("style-sheet");
-    let path = style.getAttribute("href");
-    path = path.substring(0, path.lastIndexOf("/"));
-    let mode = "dark"
-    let text = "Dark"
-    
 
-    if (button.getAttribute("value") === "dark") {
-        sheet = "/dark-mode.css";
-        mode = "light";
+    let html = document.getElementsByTagName("html")[0];
+    let current = html.getAttribute("id"); 
+    let mode = "light"
+    let text = "Dark"
+
+    if (current === "light") {
+        mode = "dark";
         text = "Light";
     }
-    button.setAttribute("value", mode);
-    button.innerHTML = text + " Mode";
-    document.getElementById("style-sheet").setAttribute("href", path + sheet);
-
+    
+    document.getElementById("mode").innerHTML = text + " Mode";
+    html.setAttribute("id", mode);
 }
 
 function loadUp() {
