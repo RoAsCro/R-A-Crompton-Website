@@ -1,9 +1,10 @@
 
 window.onload = function() {
-    window.alert("t5");
 
     const filePath = "/resources/images/gallery-images"
+    
     let gallery = document.getElementsByTagName("head")[0].getAttribute("id");
+    window.alert("t7");
 
     $.get("../scripts/images.xml", function(data) {
         window.alert("Two");
@@ -18,6 +19,6 @@ window.onload = function() {
             document.getElementsByTagName("body")[0].append;
         }
     },
-    "xml")
+    "xml");
 
 }
