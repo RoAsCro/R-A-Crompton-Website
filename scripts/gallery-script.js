@@ -1,12 +1,12 @@
 
 window.onload = function() {
-    // window.alert();
+    window.alert("One");
 
     const filePath = "/resources/images/gallery-images"
     let gallery = document.getElementsByTagName("head")[0].getAttribute("id");
 
     $.get("../scripts/images.xml", function(data) {
-        window.alert();
+        window.alert("Two");
 
         const images = data.querySelectorAll("image < " + gallery);
 
@@ -14,6 +14,7 @@ window.onload = function() {
         for (let i = 0; i < images.length; i++) {
             const img = document.createElement("img");
             img.setAttribute("src", filePath + images[i].querySelector("name").innerHTML);
+            img.setAttribute("alt", images[i].querySelector("alt").innerHTML)
             document.getElementsByTagName("body")[0].append;
         }
     })
