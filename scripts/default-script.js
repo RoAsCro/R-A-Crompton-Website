@@ -1,5 +1,4 @@
 function colourMode() {
-
     let html = document.getElementsByTagName("html")[0];
     let current = html.getAttribute("id"); 
     let mode = "light"
@@ -20,13 +19,16 @@ function loadUp() {
     const button = document.createElement("button");
     button.setAttribute("id", "mode");
     button.innerHTML = "Dark Mode";
+
+    button.onclick = colourMode;
     const body = document.getElementsByTagName("body")[0];
 
     body.insertBefore(button, body.firstChild);
+
 }
 
 
 window.onload = function() {
     loadUp();
-    document.getElementById("mode").onclick = colourMode;
+    // document.getElementById("mode").onclick = colourMode;
 }
