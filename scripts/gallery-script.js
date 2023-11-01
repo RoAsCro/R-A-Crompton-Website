@@ -26,7 +26,7 @@ function loadUp() {
 
 
 window.onload = function() {
-
+    loadUp();
     
 
 }
