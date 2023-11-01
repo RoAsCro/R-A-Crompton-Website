@@ -3,27 +3,33 @@
 function loadGallery() {
     const filePath = "../resources/images/";
     
-    let gallery = document.getElementsByTagName("head")[0].getAttribute("id");
+    let gallery = document.getElementsByClassName("gallery");
+    
+    for(let category of gallery) {
 
-    $.get("../scripts/images.xml", function( data ) {
+    
+        let imageType = category.getAttribute("id");
 
-        const images = data.querySelectorAll(gallery + " > image");
-        
-        let output = "<p>";
-        for (let i = 0; i < images.length; i++) {
-            const anchor = document.createElement("a");
-            const img = document.createElement("img");
-            const path = filePath + images[i].querySelector("name").innerHTML;
-            img.setAttribute("src", path);
-            anchor.setAttribute("href", path);
-            img.setAttribute("alt", images[i].querySelector("alt").innerHTML);
-            img.setAttribute("height", 400);
-            anchor.appendChild(img);
-            document.getElementsByTagName("body")[0].append(anchor);
-        }
-        },
-        "xml"
-        )
+        $.get("../scripts/images.xml", function( data ) {
+
+            const images = data.querySelectorAll(imageType + " > image");
+            
+            for (let image of images) {
+                const anchor = document.createElement("a");
+                const img = document.createElement("img");
+                const path = filePath + image.querySelector("name").innerHTML;
+                img.setAttribute("src", path);
+                anchor.setAttribute("href", path);
+                img.setAttribute("alt", image.querySelector("alt").innerHTML);
+                img.setAttribute("height", 400);
+                img.setAttribute("class", "galleryItem");
+                anchor.appendChild(img);
+                category.append(anchor);
+            }
+            },
+            "xml"
+            )
+    }
 }
 
 

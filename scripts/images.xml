@@ -46,7 +46,52 @@
             <alt>A drawing of the Pokemon Vaporeon, a half-fish half-fox</alt>
         </image>
     </misc>
+    <sh>
+        <stone>
+            <image>
+                <name>eggu.png</name>
+                <alt>An image of a broken egg emitting light. Inside is a skeletal bird. In front of it is a man holding a flask with red liquid inside</alt>
+            </image>
+            <image>
+                <name>tide.png</name>
+                <alt>An image of a seaside, off the coast is a hole in the sea surrounded by coral</alt>
+            </image>
+            <image>
+                <name>coils.png</name>
+                <alt>An image of a many-headed snake in a desert, the heads fighitng each other</alt>
+            </image>
+            <image>
+                <name>twheel.png</name>
+                <alt>An image of a fractal circle, many parts made of glass with blood flowing through it</alt>
+            </image>
+            <image>
+                <name>tflint.png</name>
+                <alt>An image of a stone at night surrounded by fires. The firelight and starlight above reflect off it</alt>
+            </image>
+        </stone>
+        <shother>
+            <image>
+                <name>moa.png</name>
+                <alt>An image of a distant figure among the coils of a gargantuan serpent, larger than the whole frame, the figure showering in its blood</alt>
+            </image>
+            <image>
+                <name>sun.png</name>
+                <alt>An image of a floating metal sphere with organic eyes on it</alt>
+            </image>
+        </shother>
+    </sh>
     <animation>
-
+        <image>
+            <name>ani1.gif</name>
+            <alt>An animation: rain falls, and eventially becomes lines that form a Celtic knot pattern. Meanwhile, further knots grow out of the ground. The two twist together.</alt>
+        </image>
+        <image>
+            <name>triskel.gif</name>
+            <alt>An animation: triskel forms out of three lines growing from the centre of the screen. The triskel glows blue, then its three lines unwind, each forming another triskel. These all glow, then each scatters into three lines and wind offscreen.</alt>
+        </image>
+        <image>
+            <name>shattered.gif</name>
+            <alt>A gif of a blue translucent head with golden spikes sprouting from its back, seeming to have smashed their way out. It apears to glitch, like an old television</alt>
+        </image>
     </animation>
 </images>

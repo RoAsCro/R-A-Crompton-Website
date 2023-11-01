@@ -14,6 +14,10 @@
     }
 }
 
+.galleryItem {
+    padding-left: 2px;
+}
+
 p {
     margin-right: 20px;
 }
