@@ -14,10 +14,6 @@
             <alt>A picture featuring a sleeping cat, a teapot, and a laptop, all in a purple colour palette</alt>
         </image>
         <image>
-            <name>city.png</name>
-            <alt>A futuristic low-angle cityscape in orange, purple, and light blue</alt>
-        </image>
-        <image>
             <name>station.png</name>
             <alt>A landscape of a space station with a blue planet in the background</alt>
         </image>
@@ -38,10 +34,6 @@
             <alt>An ice cream sundae that looks like lava</alt>
         </image>
         <image>
-            <name>arm.png</name>
-            <alt>A robotic prosthetic arm stylised to look like stained glass</alt>
-        </image>
-        <image>
             <name>sleep.png</name>
             <alt>A stylised drawing of a person head down on a desk next to a candle while spirits surround them</alt>
         </image>
@@ -54,4 +46,7 @@
             <alt>A drawing of the Pokemon Vaporeon, a half-fish half-fox</alt>
         </image>
     </misc>
+    <animation>
+
+    </animation>
 </images>
