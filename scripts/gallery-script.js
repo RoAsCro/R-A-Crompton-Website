@@ -1,10 +1,10 @@
 
-window.onload = function() {
 
-    const filePath = "/resources/images/gallery-images"
+function loadUp() {
+    // const filePath = "/resources/images/gallery-images";
     
-    let gallery = document.getElementsByTagName("head")[0].getAttribute("id");
-    window.alert("t12");
+    // let gallery = document.getElementsByTagName("head")[0].getAttribute("id");
+    window.alert("t13");
 
     $.get("../scripts/images2.xml", function( data ) {
         window.alert("Two");
@@ -21,5 +21,12 @@ window.onload = function() {
         },
         "xml"
         )
+}
+
+
+
+window.onload = function() {
+
+    
 
 }
