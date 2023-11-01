@@ -11,11 +11,15 @@ function loadGallery() {
         
         let output = "<p>";
         for (let i = 0; i < images.length; i++) {
+            const anchor = document.createElement("a");
             const img = document.createElement("img");
-            img.setAttribute("src", filePath + images[i].querySelector("name").innerHTML);
+            const path = filePath + images[i].querySelector("name").innerHTML;
+            img.setAttribute("src", path);
+            anchor.setAttribute("href", path);
             img.setAttribute("alt", images[i].querySelector("alt").innerHTML);
             img.setAttribute("height", 400);
-            document.getElementsByTagName("body")[0].append(img);
+            anchor.appendChild(img);
+            document.getElementsByTagName("body")[0].append(anchor);
         }
         },
         "xml"
