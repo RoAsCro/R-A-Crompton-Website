@@ -30,5 +30,4 @@ function loadUp() {
 
 window.onload = function() {
     loadUp();
-    // document.getElementById("mode").onclick = colourMode;
 }

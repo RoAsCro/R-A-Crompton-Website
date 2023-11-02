@@ -21,3 +21,13 @@
 p {
     margin-right: 20px;
 }
+
+#mode {
+    position: relative;
+    left: 90%;
+}
+
+.icon {
+    position: relative;
+    top: 30px;
+}
