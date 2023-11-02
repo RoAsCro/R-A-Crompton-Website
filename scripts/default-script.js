@@ -18,6 +18,7 @@ function loadUp() {
     // Add the dark mode button to the top of the document
     const button = document.createElement("button");
     button.setAttribute("id", "mode");
+    button.setAttribute("class", "header" )
     button.innerHTML = "Dark Mode";
 
     button.onclick = colourMode;

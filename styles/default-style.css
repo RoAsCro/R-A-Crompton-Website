@@ -4,14 +4,22 @@
 
 #light {
     background-color: lightgrey;
+    
 }
 
 #dark {
     background-color: #2f293d;
     color: #FAF0E6;
-    a:visited {
-        color: #a00305;
-    }
+    
+    
+}
+
+#dark a:link {
+    color: lightblue
+}
+
+#dark a:visited {
+    color: #a00305;
 }
 
 .galleryItem {
@@ -22,12 +30,19 @@ p {
     margin-right: 20px;
 }
 
-#mode {
+/* #mode {
     position: relative;
     left: 90%;
-}
+} */
 
 .icon {
     position: relative;
     top: 30px;
+    height: 65px;
+    border-radius: 50%;
+}
+
+.header {
+    position: fixed;
+    left: 90%;
 }
