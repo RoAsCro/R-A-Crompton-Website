@@ -28,7 +28,7 @@
     
 }
 
-@media (max-width: 800px) {
+@media only screen and (max-width: 800px) {
     .galleryItem {
         /* position: block; */
         object-fit:scale-down;
