@@ -33,7 +33,7 @@
         /* position: block; */
         object-fit:scale-down;
         width: 100%;
-        height:max-content;
+        height:min-content;
         /* aspect-ratio: 1 / 1; */
     }
 }
