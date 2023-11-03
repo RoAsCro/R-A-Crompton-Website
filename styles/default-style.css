@@ -24,6 +24,18 @@
 
 .galleryItem {
     padding-left: 2px;
+
+    
+}
+
+@media (max-width: 680px) {
+    .galleryItem {
+        /* position: block; */
+        object-fit:scale-down;
+        width: 100%;
+        height:max-content;
+        /* aspect-ratio: 1 / 1; */
+    }
 }
 
 p {
@@ -46,3 +58,34 @@ p {
     position: fixed;
     left: 90%;
 }
+
+
+.top {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 0.15;
+    padding-top: 0%;
+    z-index: -1;
+}
+
+
+.head-image {
+    object-fit: cover;
+    width: 100%;
+    aspect-ratio: 1 / 0.15;
+    position: absolute;
+}
+
+#light .head-image.dark {
+    z-index: -1;
+    /* position: fixed; */
+}
+
+#dark .head-image.light {
+    z-index: -1;
+    /* position: fixed; */
+}
+
+/* #main {
+    /* background-color: bl;
+} */
