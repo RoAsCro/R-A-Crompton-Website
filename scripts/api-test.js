@@ -1,54 +1,75 @@
 const api_url = "https://randomuser.me/api/"; 
 const api_url_2 = "https://api.magicthegathering.io/v1/cards?"; 
 const api_url_3 = "https://api.magicthegathering.io/v1/cards/"; 
-const scryfall = "https://api.scryfall.com/cards/multiverse/";
+const scryfall = "https://api.scryfall.com/cards/random";
+let cardName = "";
 
-  async function getCard() { 
+async function getCard() { 
 
-    // Reset hint
-    document.getElementById("hint-output").setAttribute("style", "visibility: hidden;")
+  // document.getElementById("text-output").setAttribute("style", "visibility: hidden;")
+  $("#text-output").attr("style", "visibility: hidden;");
+  $("#type-output").attr("style", "visibility: hidden;");
+  $("#identity-output").attr("style", "visibility: hidden;");
 
-    
-    // Making an API call (request) 
-    // and getting the response back 
-    const id = Math.floor(Math.random() * 4972)
-    const response = await fetch(api_url_2 + new URLSearchParams({
-      multiverseid: id
-  }));
-    
-    // Parsing it to JSON format 
-    const data = await response.json(); 
-    // const mtg = require('mtgsdk')
+  const responseThree = await fetch(scryfall);
+  const dataThree = await responseThree.json(); 
 
-    // mtg.card.find(386616)
-    // .then(result => {
-    //   console.log(result.card.name)
-    // })
-
-
-    console.log(data.cards); 
-    console.log(data.cards[0].originalText); 
-
-    // const responseTwo = await fetch(api_url_3 + id);
-    // const dataTwo = await responseTwo.json()
-    // console.log(dataTwo.card); 
-
-    const responseThree = await fetch(scryfall + id);
-    const dataThree = await responseThree.json()
-    // console.log(dataThree.image_uris.small); 
-
-    document.getElementById("output").setAttribute("src", dataThree.image_uris.art_crop);
-    document.getElementById("hint-output").innerHTML = dataThree.oracle_text;
-    
+  console.log(dataThree); 
+  if (typeof dataThree.image_uris == 'undefined') {
+    getCard();
+    return;
   }
 
-  function getHint() {
-    document.getElementById("hint-output").setAttribute("style", "")
+  document.getElementById("output").setAttribute("src", dataThree.image_uris.art_crop);
+  let description = dataThree.oracle_text;
+  cardName = dataThree.name;
+  description = description.replace(cardName, "[CARD NAME]")
+  document.getElementById("text-output").innerHTML = description
+  $("#type-output").text(dataThree.type_line)
+
+  let identity = dataThree.color_identity;
+  if (identity.length == 0) {
+    identity = "Colorless";
   }
+  $("#identity-output").text(identity)
+
+}
+
+function getHint(type) {
+  document.getElementById(type + "-output").setAttribute("style", "")
+}
+
+function submitAnswer() {
+  if ($("#answer").val() === cardName) {
+    const correct = $("#correct");
+    correct.text(parseInt(correct.text()) + 1);
+  } else {
+    
+  }
+  const questions = $("#questions");
+  questions.text(parseInt(questions.text()) + 1);
+  getCard();
+
+}
+
 
 window.onload = function() {
-  // window.alert();
     loadUp();
-    document.getElementById("hint").onclick = getHint;
-    document.getElementById("activate").onclick = getCard;
+    $("#hint").on("click", function() {
+      getHint("text")
+    });
+    $("#identity").on("click", function() {
+      getHint("identity")
+    });
+    $("#types").on("click", function() {
+      getHint("type")
+    });
+    getCard();
+
+
+    $("#answer").on("keypress", function(e) {
+      if (e.which === 13) {
+        submitAnswer();
+      }
+      });
 }

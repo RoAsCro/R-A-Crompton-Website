@@ -30,11 +30,12 @@
 
 @media screen and (max-width: 800px) {
     .galleryItem {
-        /* position: block; */
+        display: flex;
+        flex-direction: column;
+        gap: 0;
         object-fit:scale-down;
         width: 100%;
         height:min-content;
-        /* aspect-ratio: 1 / 1; */
     }
 }
 
@@ -42,10 +43,6 @@ p {
     margin-right: 20px;
 }
 
-/* #mode {
-    position: relative;
-    left: 90%;
-} */
 
 .icon {
     position: relative;

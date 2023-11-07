@@ -3,6 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <link id="style-sheet" rel="stylesheet" href="./styles/default-style.css">
+        <link id="style-sheet" rel="stylesheet" href="./styles/mtg-style.css">
+        <script type="text/javascript" src="./scripts/jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="./scripts/default-script.js"></script>
         <script type="text/javascript" src="./scripts/api-test.js"></script>
 
@@ -15,13 +17,28 @@
             <img id="output">
         </div>
         <div>
-            <form action="">
-                <input type="text" placeholder="Answer Here" id="answer">
-            </form>
+            <h4><span id="correct">0</span>/<span id="questions">0</span></h4>
         </div>
         <div>
-            <button id="hint">Get hint: Card text</button>
-            <p id="hint-output" style="visibility: hidden;"></p>
+            <!-- <form method="dialog"> -->
+            <input type="text" placeholder="Answer Here" id="answer">
+            <!-- </form> -->
+        </div>
+        <div id="hints">
+            <h4>Hints:</h4>
+            
+            <div class="hint-card"><button id="types">Card types</button>
+                <p id="type-output" style="visibility: hidden;">Test text</p>
+            </div>
+
+            <div class="hint-card"><button id="identity">Colour identity</button>
+                <p id="identity-output" style="visibility: hidden;">Test text</p>
+            </div>
+            <div class="text-hint"><button id="hint">Card text</button>
+                <p id="text-output" style="visibility: hidden;">est text</p>
+            </div>
+
+            
         </div>
     </body>
 </html>
