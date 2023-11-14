@@ -3,7 +3,7 @@
 }
 
 #light {
-    background-color: lightgrey;
+    background-color: lightgrey; 
     
 }
 
@@ -71,6 +71,13 @@ p {
     width: 100%;
     aspect-ratio: 1 / 0.15;
     position: absolute;
+}
+
+.img-anch {
+    /* background-color: #2f293d; */
+    width: max-content;
+    margin: 0px;
+    padding: 0px;
 }
 
 #light .head-image.dark {

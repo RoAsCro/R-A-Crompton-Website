@@ -20,9 +20,10 @@ function loadGallery() {
                 const path = filePath + image.querySelector("name").innerHTML;
                 img.setAttribute("src", path);
                 anchor.setAttribute("href", path);
+                anchor.setAttribute("class", "img-anch");
                 img.setAttribute("alt", image.querySelector("alt").innerHTML);
                 img.setAttribute("height", 400);
-                img.setAttribute("class", "galleryItem");
+                img.setAttribute("class", " galleryItem");
                 anchor.appendChild(img);
                 category.append(anchor);
             }
